@@ -24,9 +24,9 @@ export class ProductItemDetailComponent implements OnInit {
   ngOnInit(): void {
     let id = +this.route.snapshot.params['id'];
     this.product = this.productService.getProductById(id);
-    this.route.queryParamMap.subscribe(params => {
-       console.log(params);
-    });
+    // this.route.queryParamMap.subscribe(params => {
+    //    console.log(params);
+    // });
   }
 
   onAddToCart(product:Product,quantity:number){

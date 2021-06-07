@@ -10,19 +10,13 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
   constructor(private httpClient: HttpClient) { 
-      // this.getData().subscribe(res => {
-      //   for (let index = 0; index < res.length; index++) {
-      //     this.pData.push(res[index]);
-      //   }
+    // this.getData().subscribe(res => {
+    //   for (let index = 0; index < res.length; index++) {
+    //     console.log("Akhil");
+    //     this.pData.push(res[index]);
+    //   }
 
-      // });
-      // console.log(this.pData.length)
-      // this.products = [];
-
-      // for(let i = 0; i < this.pData.length; i++){
-      //     this.products.push(this.pData[i]);
-      // }
-      // console.log(this.products.length);
+    // });
   }
 
   pData: Product[] = [];
@@ -38,12 +32,14 @@ export class ProductService {
 
   getProducts(): Product[]{
       //this.pData = <Product[]>data;
-      this.getData().subscribe(res => {
-        for (let index = 0; index < res.length; index++) {
-          this.pData.push(res[index]);
-        }
+      // let data : Product[]  = [];
+      // this.getData().subscribe(res => {
+      //   for (let index = 0; index < res.length; index++) {
+      //     console.log("Akhil");
+      //     data.push(res[index]);
+      //   }
   
-      });
+      // });
       // console.log(this.pData.length)
       // this.products = [];
 
@@ -51,7 +47,8 @@ export class ProductService {
       //     this.products.push(this.pData[i]);
       // }
       // console.log(this.products.length);
-      return this.pData;
+      //console.log("Data"+ this.pData.length);
+      return data;
   }
 
   addToCart(product: Product, quantity:number):void{
