@@ -8,7 +8,7 @@
                 <input size="50%" type="number" name="amount" min="1" max="100" value={{cartItem.quantity}} 
                  [(ngModel)]="itemQuantity" (ngModelChange)="onQuantityChange($event)">
                 <h5>Price : ${{cartItem.totalCost.toFixed(2)}}</h5>
-                <button (click)="removeItem()">Remove</button>
+                <button (click)="removeItem(cartItem)">Remove</button>
             </div>
         </div>
     </div>

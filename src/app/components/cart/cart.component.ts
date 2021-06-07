@@ -47,5 +47,9 @@ export class CartComponent implements OnInit {
     
   }
 
+  removeItem(cartItem: CartItem):void{
+    this.productService.removeItem(cartItem);
+  }
+
 
 }

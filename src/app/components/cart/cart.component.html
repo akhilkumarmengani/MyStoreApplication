@@ -1,6 +1,6 @@
 <div class="cart-container">
 <div class="item-container">
-    <app-cart-item *ngFor="let item of cartItems" [cartItem]="item"></app-cart-item>
+    <app-cart-item *ngFor="let item of cartItems" [cartItem]="item" (removedItem)="removeItem($event)"></app-cart-item>
     <div *ngIf="getTotalCost()>0">
       <h4>Total Cost = ${{getTotalCost()}}</h4>
     </div>

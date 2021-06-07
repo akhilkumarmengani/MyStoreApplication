@@ -26,8 +26,7 @@ export class ProductService {
 
   getData():Observable<Product[]>{
       return this.httpClient
-      .get<Product[]>('http://localhost:4000/assets/data.json');
-  
+      .get<Product[]>('../../assets/data.json');
   }
 
   getProducts(): Product[]{
@@ -140,5 +139,4 @@ export class ProductService {
   }
 
  
-
 }
