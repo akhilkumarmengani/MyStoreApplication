@@ -32,8 +32,10 @@ export class ProductService {
 
   getProducts(): Product[]{
       //this.pData = <Product[]>data;
-      // let data : Product[]  = [];
-      // this.getData().subscribe(res => {
+      //let testdata : Product[]  = [];
+      //testdata = this.httpClient.get('http://localhost:4000/assets/data.json').subscribe(data => {});
+      //console.log(testdata)
+      //.subscribe(res => {
       //   for (let index = 0; index < res.length; index++) {
       //     console.log("Akhil");
       //     data.push(res[index]);
