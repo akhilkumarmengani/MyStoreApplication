@@ -30,8 +30,13 @@ export class ProductItemComponent implements OnInit {
   }
   onAddToCart(product:Product,quantity:number){
     console.log('In AddToCart');
-    console.log(product.name +' '+ quantity);
+    console.log(product.name +' '+ quantity +' '+ typeof(quantity));
     this.productService.addToCart(product,quantity);
+    let name : string = product.name;
+    if(quantity>1){
+      name += "s";
+    }
+    alert("Added "+quantity+" "+ name + " to cart");
   }
 
 }

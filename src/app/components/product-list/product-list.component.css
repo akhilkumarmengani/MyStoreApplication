@@ -1,12 +1,17 @@
 .product-index {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1024px;
+    justify-content: space-evenly;
+    max-width: 70%;
     margin-bottom: 64px;
   }
   
 .product-container {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #c8e6dc;
+    background-image: url("../../../assets/WhiteBackground.png");
 }

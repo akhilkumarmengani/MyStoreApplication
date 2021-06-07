@@ -1,13 +1,18 @@
-<div class="cart-container">
-<div class="cart-item">
-        <img class="img" width="100" height="200" src="{{cartItem.product.url}}">
+
+    <div class="cart-item">
+            <img class="img" width="100" height="200" src="{{cartItem.product.url}}">
         <div class="cart-item-details">
-            <p>{{cartItem.product.name}}</p>
-            <p>{{cartItem.quantity}}</p>
-            <p>{{cartItem.totalCost}}</p>
+            <div class="form-group form-inline">
+                <h4>{{cartItem.product.name}}</h4>
+                <label for="Amount"> Amount: </label>
+                <input size="50%" type="number" name="amount" min="1" max="100" value={{cartItem.quantity}} 
+                 [(ngModel)]="itemQuantity" (ngModelChange)="onQuantityChange($event)">
+                <h5>Price : ${{cartItem.totalCost.toFixed(2)}}</h5>
+                <button (click)="removeItem()">Remove</button>
+            </div>
         </div>
-</div>
-</div>
+    </div>
+
 
 
 

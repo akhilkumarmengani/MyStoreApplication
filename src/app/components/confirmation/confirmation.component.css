@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 8%;
+    margin-top: 2%;
+    flex-direction: column;
   }
   
   .confirmation-items {
@@ -12,9 +13,28 @@
   }
   
   .confirmation-header {
-    color: #33e5bc
+    color: #0ca4b8
   }
   
   .confirmation-item {
     margin-bottom: 30px;
+  }
+
+  button {
+    background-color: #3ab6f0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #076ff6;
+  }
+
+  img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
   }

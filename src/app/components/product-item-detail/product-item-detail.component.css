@@ -1,0 +1,42 @@
+img {
+    border-radius: 10px;
+    width: 320px;
+  }
+  
+  .select-input {
+    width: 108px; 
+    margin-bottom: 8px;
+    height : 20px;
+  }
+  
+  .detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    flex-direction: row;
+  }
+  
+  .detail-item {
+    margin-left: 128px;
+    margin-right: 128px;
+    flex-direction: column;
+  }
+  
+  .back-link {
+    margin-top: 20px;
+  }
+
+  button {
+    background-color: #3ab6f0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #076ff6;
+  }
+  

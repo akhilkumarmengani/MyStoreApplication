@@ -1,11 +1,50 @@
 <div class="cart-container">
-<app-cart-item *ngFor="let item of cartItems" [cartItem]="item"></app-cart-item>
-    
-<div class="cart-panel">  
-    <form >
-        <input type="text" value="name">
-        <br>
-        <input type="text" value="Email">
-    </form>
+<div class="item-container">
+    <app-cart-item *ngFor="let item of cartItems" [cartItem]="item"></app-cart-item>
+    <div *ngIf="getTotalCost()>0">
+      <h4>Total Cost = ${{getTotalCost()}}</h4>
+    </div>
+    <div class="empty-cart-message" *ngIf="getTotalCost()<=0">
+      <img src="../../../assets/EmptyCart.png">
+      <h3>Looks like your cart is empty :(</h3>
+      <br>
+      <h4>Start adding items!</h4>
+      <br>
+      <button routerLink="/home">Home</button>
+    </div>
 </div>
+
+<div class="container" *ngIf="getTotalCost()>0">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+       <div *ngIf="formFirstName.invalid && formFirstName.dirty">
+            <div class="warning" *ngIf="formFirstName.errors?.minlength">
+              <span>Please provide atleast 3 characters</span>
+            </div>
+        </div>
+      <label class="required" for="firstName">First Name</label>
+      <input type="text" required minlength="3" maxlength="20" name="firstName" placeholder="(min 3 characters)" 
+      [(ngModel)]="firstName" #formFirstName="ngModel">
+      
+      <div *ngIf="formAddress.invalid && formAddress.dirty">
+        <div class="warning" *ngIf="formAddress.errors?.minlength">
+          <span>Please provide atleast 6 characters</span>
+        </div>
+      </div>
+      <label for="address">Address</label>
+      <input type="text" required minlength="6" maxlength="20" name="address" placeholder="(min 6 characters)" [(ngModel)]="address"
+      #formAddress="ngModel">
+      
+      <div *ngIf="formCCNumber.invalid && formCCNumber.dirty">
+        <div class="warning" *ngIf="formCCNumber.errors?.minlength">
+          <span>Please provide 16 digits</span>
+        </div>
+      </div>
+      <label for="ccNumber">Credit Card</label>
+      <input type="text" required minlength="16" maxlength="16" name="ccNumber" placeholder="(16 digit cc number)" 
+      [(ngModel)]="ccNumber" #formCCNumber="ngModel">
+  
+      <button (click)="onClick()" [disabled]="form.invalid" >Place Order </button>
+    </form>
+    
+  </div>
 </div>
