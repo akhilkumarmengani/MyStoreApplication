@@ -7,6 +7,9 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
+      - node/install
+      - checkout
+      - aws-cli/setup
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - run:
@@ -14,10 +17,6 @@ jobs:
             google-chrome --version
             chromedriver --version
           name: Check install
-    steps:
-      - node/install
-      - checkout
-      - aws-cli/setup
       - run:
           name: Angular Install
           command: |
