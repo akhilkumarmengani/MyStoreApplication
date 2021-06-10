@@ -1,0 +1,28 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+  aws-cli: circleci/aws-cli@1.3.1
+jobs:
+  build:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - node/install
+      - checkout
+      - aws-cli/setup
+      - run:
+          name: Angular Install
+          command: |
+            npm install -g @angular/cli
+      - run:
+          name: MyStore Build
+          command: |
+            ng build
+      - run:
+          name: Deploy App
+          command: |
+            ng run deploy
+      - run:
+          name: Done
+          command: |
+           echo "Deployment Done" 
