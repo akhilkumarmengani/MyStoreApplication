@@ -25,7 +25,7 @@ jobs:
       - run:
           name: MyStore Test
           environment:
-            CHROME_BIN=/usr/bin/google-chrome
+            CHROME_BIN : /usr/bin/google-chrome
           command: |
             ng test
       - run:
