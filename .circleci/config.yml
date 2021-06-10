@@ -31,12 +31,6 @@ jobs:
           command: |
             ng build
       - run:
-          name: MyStore Test
-          environment:
-            CHROME_BIN : /usr/bin/google-chrome
-          command: |
-            ng test
-      - run:
           name: Deploy App
           command: |
             npm run deploy-s3
