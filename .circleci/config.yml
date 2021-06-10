@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Deploy App
           command: |
-            ng deploy
+            npm run deploy-s3
       - run:
           name: Done
           command: |
