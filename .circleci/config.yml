@@ -15,6 +15,10 @@ jobs:
           command: |
             npm install -g @angular/cli
       - run:
+          name: Devkit Install
+          command: |
+            npm install --save-dev @angular-devkit/build-angular
+      - run:
           name: MyStore Build
           command: |
             ng build
