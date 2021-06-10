@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Deploy App
           command: |
-            ng run deploy
+            ng deploy
       - run:
           name: Done
           command: |
