@@ -23,6 +23,10 @@ jobs:
           command: |
             ng build
       - run:
+          name: MyStore Test
+          command: |
+            ng test
+      - run:
           name: Deploy App
           command: |
             npm run deploy-s3
