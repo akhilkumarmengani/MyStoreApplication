@@ -44,3 +44,4 @@ You can also use `ng generate directive|pipe|service|class|guard|interface|enum|
     This component is used to:
     - Fetch Product Data
     - Store,Fetch,Update Cart Data
+    - Checkout items
